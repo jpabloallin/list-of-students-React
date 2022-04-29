@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import FormStudent from "./Form";
+import FormStudent from "./FormStudent";
 import DisplayStudents from "./DisplayStudents";
+import { CardHeader , Container } from "reactstrap";
 
 const ListStudent = () => {
   const onAddStudent = (event) => {
@@ -33,14 +34,17 @@ const ListStudent = () => {
 
   return (
     <div>
-      <h1>List of students</h1>
-      <FormStudent
-        addName={addName}
-        addLastName={addLastName}
-        addEmail={addEmail}
-        onAddStudent={onAddStudent}
-      />
-      <DisplayStudents list={list} setList={setList} />
+        <Container className="m-3">
+        <CardHeader tag="h2" className="text-center" color="primary">List of students</CardHeader>
+        <FormStudent
+            addName={addName}
+            addLastName={addLastName}
+            addEmail={addEmail}
+            onAddStudent={onAddStudent}
+        />
+        <DisplayStudents list={list} setList={setList} />
+        </Container>
+        
     </div>
   );
 };
