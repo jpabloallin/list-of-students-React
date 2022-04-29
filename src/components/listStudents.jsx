@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FormStudent from "./Form";
+import DisplayStudents from "./DisplayStudents";
 
 const ListStudent = () => {
   const onAddStudent = (event) => {
@@ -34,12 +35,12 @@ const ListStudent = () => {
     <div>
       <h1>List of students</h1>
       <FormStudent
-      addName = {addName}
-      addLastName = {addLastName}
-      addEmail = {addEmail}
-      onAddStudent = {onAddStudent}
+        addName={addName}
+        addLastName={addLastName}
+        addEmail={addEmail}
+        onAddStudent={onAddStudent}
       />
-        <button onClick={onAddStudent}>Add student</button>
+      <DisplayStudents list={list} setList={setList} />
     </div>
   );
 };
