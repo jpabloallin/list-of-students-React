@@ -39,14 +39,7 @@ const ListStudent = () => {
       addEmail = {addEmail}
       onAddStudent = {onAddStudent}
       />
-        <button onClick={onAddStudent}>Show students</button>
-        {list.map((student, index) => (
-          <div key={index}>
-            <h2>{student.name}</h2>
-            <h2>{student.lastName}</h2>
-            <h2>{student.email}</h2>
-          </div>
-        ))}
+        <button onClick={onAddStudent}>Add student</button>
     </div>
   );
 };
