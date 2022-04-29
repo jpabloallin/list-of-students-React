@@ -1,7 +1,7 @@
 import React from 'react'
 
-const formStudent = (props) => {
-    const {addName, addLastName, addEmail} = props
+const FormStudent = (props) => {
+    const {addName, addLastName, addEmail, onAddStudent} = props
   
   return (
     <div>
